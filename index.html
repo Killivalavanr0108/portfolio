@@ -1,105 +1,153 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Portfolio</title>
+    <title>Portfolio - Killivalavan R</title>
+    <meta name="description" content="Portfolio of Killivalavan R, Web Developer - Showcasing projects, skills, and certificates.">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color:#2b96ff;
+            background-color:#101820;
+            color: #fff;
         }
 
+        /* --- Header Section with Background --- */
         header {
-            background-color: #0018ff#ff000a#ff00f1;
-            color: #fff;
+            position: relative;
             text-align: center;
-            padding: 2rem 0;
-            position: relative; /* Add this */
+            color: #fff;
+            padding: 5rem 0 6rem;
+            background: url('Artificial intelligence (AI).jpg') center/cover no-repeat;
+        }
+
+        /* Dark overlay for better text contrast */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeDown 1.5s ease forwards;
         }
 
         .header-content h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            margin-bottom: 5px;
+            text-shadow: 0 0 20px #00f7ff;
         }
 
-        /* Add styles for the round profile picture */
         .profile-picture {
-            width: 150px; /* Adjust the size as needed */
+            width: 150px;
             height: 150px;
-            border-radius: 55%; /* Create a circular shape */
-            object-fit: cover; /* To ensure the image fills the circular area */
-            position: absolute; /* Add this */
-            top: 75px; /* Adjust top position as needed */
-            left: 75px; /* Adjust left position as needed */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 0 20px rgba(0,255,255,0.8);
+            animation: scaleIn 1.5s ease forwards;
         }
 
         nav {
-            background-color: #333;
-            color: #fff#15ff4d;
+            background-color: #0d0d0d;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
 
         nav ul li {
-            display: inline;
+            display: inline-block;
             margin: 0 20px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
 
+        nav ul li a:hover {
+            color: #15ff4d;
+        }
+
+        /* --- Sections --- */
         .section-content {
-            background-color: #fff;
+            background-color: #ffffff10;
+            backdrop-filter: blur(10px);
             padding: 2rem;
             margin: 1rem;
             border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0,255,255,0.1);
             text-align: justify;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s ease;
+        }
+
+        .section-content.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .download-button {
-            background-color: #333;
-            color: #fff;
-            padding: 0.5rem 1rem;
+            background-color: #00f7ff;
+            color: #000;
+            font-weight: bold;
+            padding: 0.5rem 1.5rem;
             text-decoration: none;
             border-radius: 20px;
             display: inline-block;
             margin-top: 10px;
-            align-self: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .download-button:hover {
-            background-color: #555;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00f7ff;
         }
 
         footer {
             text-align: center;
             padding: 1rem 0;
-            background-color: #333;
+            background-color: #0d0d0d;
             color: #fff;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
         }
 
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
+        /* --- Animations --- */
+        @keyframes fadeDown {
+            from {opacity: 0; transform: translateY(-30px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes scaleIn {
+            from {transform: scale(0);}
+            to {transform: scale(1);}
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <!-- Add your profile picture here -->
-            <img src="./Killivalavan_R.jpg" alt="Your Profile Picture" class="profile-picture">
-   
-       
-           <h1>KILLIVALAVAN R</h1>
-            <p>Web-developer</p>
+            <img src="./Killivalavan_R.jpg" alt="Killivalavan R - Web Developer" class="profile-picture">
+            <h1>KILLIVALAVAN R</h1>
+            <p>Web Developer</p>
         </div>
     </header>
 
@@ -110,23 +158,22 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#resume">Resume</a></li>
-            <li><a href="#Certificate">Certificate</a></li>
-           
+            <li><a href="#certificate">Certificate</a></li>
         </ul>
     </nav>
 
     <section id="about">
         <div class="section-content">
             <h2>About Me</h2>
-            <p><b><a href="Killivalavan .R_ Resume.pdf" traget="_target"></a> I'm Killivalavan.R, a passionate web developer with 1 year of experience in building and optimizing websites and web applications. I specialize in creating responsive, user-friendly, and visually appealing web solutions.</p>
+            <p>I'm <strong>Killivalavan R</strong>, a passionate web developer with 1 year of experience in building and optimizing websites and web applications. I specialize in creating responsive, user-friendly, and visually appealing web solutions.</p>
         </div>
     </section>
 
     <section id="education">
         <div class="section-content">
             <h2>Education</h2>
-            <p>B.Sc in Comp.Sci -- 2023-2026</p>
-         </div>
+            <p><strong>B.Sc in Computer Science</strong> – 2023-2026</p>
+        </div>
     </section>
 
     <section id="skills">
@@ -135,12 +182,11 @@
             <ul>
                 <li>HTML</li>
                 <li>CSS</li>
-                <li>Java Script</li>
+                <li>JavaScript</li>
                 <li>Python</li>
                 <li>Java</li>
                 <li>React.js</li>
-                <li>Git and Git-Hub</li>
-                
+                <li>Git & GitHub</li>
             </ul>
         </div>
     </section>
@@ -149,57 +195,56 @@
         <div class="section-content">
             <h2>Projects</h2>
             <ul>
-                <li><a href="#"></a>Personal Blog -
-   A fully responsive personal blog where users can read posts, leave comments, and subscribe to newsletters. 
-   
-</li>
-                <li>E-commerce Website - A comprehensive e-commerce platform with product listings, a shopping cart, and a payment gateway integration.<a href="#"></a></li>
-                <li><a href="#"></a>Weather App - A weather forecasting app that provides current weather conditions and forecasts for different locations.</li>
-                <li><a href="#"></a>Portfolio Website - Your own portfolio website to showcase your projects, skills, and contact information.</li> 
-                <!-- Add more project links here -->
+                <li><strong>Personal Blog</strong> – Fully responsive blog with comments & subscription.</li>
+                <li><strong>E-commerce Website</strong> – Product listing, cart, and payment gateway.</li>
+                <li><strong>Weather App</strong> – Real-time weather forecast using API.</li>
+                <li><strong>Portfolio Website</strong> – This very website to showcase my work!</li>
             </ul>
         </div>
     </section>
 
     <section id="resume">
-    
-        <div class="section-content">
-        <center>
+        <div class="section-content" style="text-align:center;">
             <h2>Resume</h2>
             <a href="./Killivalavan .R_ Resume.pdf" target="_blank" class="download-button">Download CV</a>
-        </center>
         </div>
-        
     </section>
-    <section id="Certificate">
-    
-        <div class="section-content">
-        <center>
-            <h2>COURSE COMPLETED CERTIFICATE TNSDC-FEWD</h2>
+
+    <section id="certificate">
+        <div class="section-content" style="text-align:center;">
+            <h2>Course Certificate</h2>
             <a href="./Completion Certificate _ SkillsBuild.pdf" target="_blank" class="download-button">Download Certificate</a>
-        </center>
         </div>
-        
     </section>
 
     <footer>
-        <p>&copy; 2025 killivalavan0108@gmail.com</p>
+        <p>&copy; 2025 | killivalavan0108@gmail.com</p>
     </footer>
 
     <script>
-        // Smooth scrolling to section when clicking on navigation links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
-
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop,
+                        top: targetElement.offsetTop - 60,
                         behavior: 'smooth'
                     });
+                }
+            });
+        });
+
+        // Scroll Reveal Animation
+        const sections = document.querySelectorAll('.section-content');
+        window.addEventListener('scroll', () => {
+            const triggerBottom = window.innerHeight * 0.85;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
                 }
             });
         });
